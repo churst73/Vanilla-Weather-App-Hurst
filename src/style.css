@@ -1,1 +1,171 @@
+body {
+  background: #f1f2f2;
+}
 
+.container {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  max-width: 420px;
+  background: #f2ebdf;
+  border-radius: 10px;
+  box-shadow: 14px 14px 0px -2px #c5c3c0;
+}
+.city-search {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  padding-top: 25px;
+}
+input {
+  width: 250px;
+  padding: 5px;
+  border: solid 2px #6d6e6f;
+  border-radius: 10px;
+}
+.button-search {
+  color: #6d6e6f;
+  background-color: #dfa73e;
+  border: solid 2px #6d6e6f;
+  border-radius: 10px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.location {
+  color: #dfa73e;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 15px;
+}
+.location:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.fa-search {
+  color: #dfa73e;
+  font-size: 24px;
+  transform: scale(-1, 1);
+  padding: 0 12px;
+}
+
+h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 28px;
+  color: #6d6e6f;
+  font-weight: 500;
+  text-align: center;
+}
+.hello-there {
+  margin: 30px 0 30px 0;
+}
+.current-city {
+  color: #dfa73e;
+  font-style: italic;
+}
+
+.current-temp {
+  font-family: "Abril Fatface", cursive;
+  color: #6d6e6f;
+  font-size: 130px;
+  text-align: center;
+  padding-left: 25px;
+  margin-top: -40px;
+}
+.degree {
+  position: relative;
+  top: -170px;
+  left: 180px;
+}
+.time-date {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  color: #dfa73e;
+  text-align: center;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+.prepare {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 25px;
+  text-align: center;
+  color: #6d6e6f;
+  margin-top: -4px;
+  margin-left: 15px;
+}
+.details {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  color: #6d6e6f;
+  margin-top: -3px;
+  margin-left: 15px;
+}
+.numbers {
+  color: #dfa73e;
+}
+.forecast-week {
+  text-align: center;
+  margin-left: 6px;
+  margin-top: -120px;
+}
+.forecast-day {
+  font-family: "Poppins", sans-serif;
+  color: #6d6e6f;
+  font-weight: 400;
+  font-size: 20px;
+}
+.col-2 {
+  margin-right: 10px;
+}
+.fa-cloud-showers-heavy {
+  font-size: 25px;
+  margin-top: 18px;
+  color: #5d79b2;
+}
+.weather {
+  margin-top: 12px;
+}
+
+.high-temp {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #6d6e6f;
+}
+.low-temp {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  color: #6d6e6f;
+}
+.fahrenheit {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  color: #dfa73e;
+  padding-bottom: 20px;
+  margin-top: 35px;
+}
+.change {
+  color: #dfa73e !important;
+  text-decoration: none;
+}
+.change:hover {
+  color: #6d6e6f !important;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.measurements {
+  color: #dfa73e;
+}
+
+.coder {
+  font-family: "Poppins", sans-serif;
+  color: #dfa73e;
+  text-align: center;
+}
+.coder-link:hover {
+  cursor: pointer;
+  color: #6d6e6f;
+}
