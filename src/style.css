@@ -87,6 +87,7 @@ h3 {
 }
 .prepare {
   font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
   font-weight: 600;
   font-size: 25px;
   text-align: center;

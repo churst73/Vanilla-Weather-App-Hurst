@@ -26,6 +26,7 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <body>
+    
     <div class="container">
       <form class="city-search" id=search>
         <input type="text" id="search-result" placeholder="Enter city here" />
@@ -35,21 +36,21 @@
         Current Location
       </div>
       <div class="hello-there">
-        <h3>Hello there, <span class="current-city" id="search-city">Bruges</span>!</h3>
+        <h3>Hello there, <span class="current-city" id="search-city"></span>!</h3>
       </div>
       <div class="row">
         <div class="col-6">
           <img src="images/smileysun-01.png" alt="sunny" width=230px>
-          <p class="current-temp" id="current-celcius">14</p> <img class="degree" id="degree-celcius" src="images/degreec.png" alt="degree" width=50px>
+          <p class="current-temp" id="current-celcius"></p> <img class="degree" id="degree-celcius" src="images/degreec.png" alt="degree" width=50px>
         </div>
         <div class="col-6">
           <p class="time-date" id="current-date">Sat, 24 April</p>
           <br />
           <p class="prepare" id="description"></p>
           <br />
-          <p class="details">HUMIDITY<br /><span class="numbers" id="humid">34</span><span class="measurements">%</span></p>
+          <p class="details">HUMIDITY<br /><span class="numbers" id="humid"></span><span class="measurements">%</span></p>
           <br>
-          <p class="details">WIND<br /><span class="numbers" id="wind">8</span><span class="measurements">km/h</span></p>
+          <p class="details">WIND<br /><span class="numbers" id="wind"></span><span class="measurements">km/h</span></p>
           <br>
         </div>  
         </div>
