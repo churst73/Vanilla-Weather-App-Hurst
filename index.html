@@ -15,8 +15,110 @@
   </head>
   <body>
     <div class="container">
-      <h1>Hello World</h1>
-      <script src="src/script.js"></script>
+      <form class="city-search" id=search>
+        <input type="text" id="search-result" placeholder="Enter city here" />
+        <button type="submit" class="button-search">Search</button>
+      </form>
+      <div class="location" id="current-location">
+        Current Location
+      </div>
+      <div class="hello-there">
+        <h3>Hello there, <span class="current-city" id="search-city">Bruges</span>!</h3>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <img src="images/smileysun-01.png" alt="sunny" width=230px>
+          <p class="current-temp" id="current-celcius">14</p> <img class="degree" id="degree-celcius" src="images/degreec.png" alt="degree" width=50px>
+        </div>
+        <div class="col-6">
+          <p class="time-date" id="current-date">Sat, 24 April</p>
+          <br />
+          <p class="prepare" id="description"></p>
+          <br />
+          <p class="details">HUMIDITY<br /><span class="numbers" id="humid">34</span><span class="measurements">%</span></p>
+          <br>
+          <p class="details">WIND<br /><span class="numbers" id="wind">8</span><span class="measurements">km/h</span></p>
+          <br>
+        </div>  
+        </div>
+        <div class="row forecast-week">
+            <div class="col-2">
+                <p class="forecast-day">
+                    Sun <br />
+                    <img class="weather" src="images/bolt.png" alt="bolt" width=40px>
+                    <br />
+                    <div class="high-temp">
+                        8°
+                    </div>
+                    <div class="low-temp">
+                        2°
+                    </div>
+                </p>
+            </div>
+            <div class="col-2">
+                <p class="forecast-day">
+                    Mon <br />
+                    <img class="weather" src="images/partcloud.png" alt="partly-cloudy" width=40px>
+                    <br />
+                    <div class="high-temp">
+                        17°
+                    </div>
+                    <div class="low-temp">
+                        11°
+                    </div>
+                </p>
+            </div>
+            <div class="col-2">
+                <p class="forecast-day">
+                    Tues <br />
+                    <img class="weather" src="images/windy.png" alt="windy" width=40px>
+                    <br />
+                    <div class="high-temp">
+                        13°
+                    </div>
+                    <div class="low-temp">
+                        9°
+                    </div>
+                </p>
+            </div>
+             <div class="col-2">
+                <p class="forecast-day">
+                    Wed <br />
+                    <img class="weather" src="images/cloud.png" alt="rainy" width=40px>
+                    <br />
+                    <div class="high-temp">
+                        7°
+                    </div>
+                    <div class="low-temp">
+                        4°
+                    </div>
+                </p>
+            </div>
+            <div class="col-2">
+                <p class="forecast-day">
+                    Thurs <br />
+                    <img class="weather" src="images/smileysun-01.png" alt="sunny" width=40px>
+                    <br />
+                    <div class="high-temp">
+                        10°
+                    </div>
+                    <div class="low-temp">
+                        11°
+                    </div>
+                </p>
+            </div>
+        </div>
+        <div class="fahrenheit">
+          <span id="love">
+            Love Fahrenheit?
+          </span>
+              <span class="change" id="degree-change">Switch here!</span>
+        </div>
+      </div>
     </div>
+    <div class="coder">
+      <a href="https://github.com/churst73/hurst-weather-app" target="_blank" class="coder-link">Open-source code</a> by Chelsea Hurst
+    </div>
+    <script src="src/script.js"></script>
   </body>
 </html>
