@@ -2,17 +2,6 @@ body {
   background-image: url("../images/background2-01.png");
   background-size: cover;
 }
-h1 {
-  font-family: "Poppins", sans-serif;
-  color: #dfa73e;
-  font-weight: 700;
-  font-size: 50px;
-  position: absolute;
-  transform: rotate(90deg);
-  top: 250px;
-  left: 700px;
-  right: -60px;
-}
 
 .container {
   margin-top: 20px;
