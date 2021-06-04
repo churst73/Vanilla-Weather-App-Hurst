@@ -19,7 +19,9 @@ function showTemperature(response) {
   let dateElement = document.querySelector("#current-date");
   let iconElement = document.querySelector("#icon");
 
-  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  celciusTemperature = response.data.main.temp;
+
+  temperatureElement.innerHTML = Math.round(celciusTemperature);
   cityElement.innerHTML = response.data.name;
   descirptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
@@ -40,8 +42,6 @@ function handleSubmit(event) {
   let cityInputElement = document.querySelector("#search-result");
   search(cityInputElement.value);
 }
-
-search("London");
 
 let form = document.querySelector("#search");
 form.addEventListener("submit", handleSubmit);
@@ -77,7 +77,7 @@ function changeDegree() {
     imageCelcius.src = "images/degreef.png";
     let celcius = document.querySelector("#current-celcius");
     let fahrenheit = celcius.innerHTML;
-    celcius.innerHTML = Math.round((fahrenheit * 9) / 5 + 32);
+    celcius.innerHTML = Math.round((celciusTemperature * 9) / 5 + 32);
     loveChange.innerHTML = "Love Celcius?";
   } else {
     imageCelcius.src = "images/degreec.png";
@@ -89,5 +89,9 @@ function changeDegree() {
   }
 }
 
+let celciusTemperature = null;
+
 let change = document.querySelector("#degree-change");
 change.addEventListener("click", changeDegree);
+
+search("London");
