@@ -17,6 +17,7 @@ function showTemperature(response) {
   let humidityElement = document.querySelector("#humid");
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#current-date");
+  let iconElement = document.querySelector("#icon");
 
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
@@ -24,6 +25,8 @@ function showTemperature(response) {
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  iconElement.setAttribute("src", `icons/${response.data.weather[0].main}.png`);
+  iconElement.setAttribute("alt", response.data.weather[0].main);
 }
 
 function search(city) {
