@@ -39,6 +39,12 @@ function search(city) {
 
 function handleSubmit(event) {
   event.preventDefault();
+  let imageCelcius = document.querySelector("#degree-celcius");
+  let loveChange = document.querySelector("#love");
+  if (loveChange.innerHTML.trim() === "Love Celcius?") {
+    imageCelcius.src = "images/degreec.png";
+    loveChange.innerHTML = "Love Fahrenheit?";
+  }
   let cityInputElement = document.querySelector("#search-result");
   search(cityInputElement.value);
 }
