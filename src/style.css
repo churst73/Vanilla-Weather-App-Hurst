@@ -65,7 +65,8 @@ h3 {
 }
 
 .current-temp {
-  font-family: "Abril Fatface", cursive;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
   color: #6d6e6f;
   font-size: 130px;
   text-align: center;
