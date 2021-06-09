@@ -1,5 +1,5 @@
 body {
-  background-image: url("../images/background2-01.png");
+  background-image: url("../images/background4-01.png");
   background-size: cover;
 }
 
@@ -145,7 +145,7 @@ h3 {
 .high-temp {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  color: #6d6e6f;
+  color: #dfa73e;
 }
 .low-temp {
   font-family: "Poppins", sans-serif;

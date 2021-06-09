@@ -10,6 +10,33 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Sun", "Mon", "Tues", "Thurs", "Fri"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+            <div class="col-2">
+                <p class="forecast-day">
+                    ${day} <br />
+                    <img class="weather" src="images/bolt.png" alt="bolt" width=40px>
+                    <br />
+                    <div class="high-temp">
+                        8°
+                    </div>
+                    <div class="low-temp">
+                        2°
+                    </div>
+                </p>
+            </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function showTemperature(response) {
   let temperatureElement = document.querySelector("#current-celcius");
   let cityElement = document.querySelector("#search-city");
@@ -101,3 +128,4 @@ let change = document.querySelector("#degree-change");
 change.addEventListener("click", changeDegree);
 
 search("London");
+displayForecast();
