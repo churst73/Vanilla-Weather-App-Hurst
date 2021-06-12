@@ -102,6 +102,7 @@ form.addEventListener("submit", handleSubmit);
 function locationName(response) {
   let apiKey = "90cc04858e590b27514e091504dac169";
   let city = response.data.name;
+  cityCurrent = city;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showTemperature);
 }
