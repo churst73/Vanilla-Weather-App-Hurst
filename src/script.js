@@ -92,7 +92,8 @@ function search(city) {
 function handleSubmit(event) {
   event.preventDefault();
   let cityInputElement = document.querySelector("#search-result");
-  search(cityInputElement.value);
+  cityCurrent = cityInputElement.value;
+  search(cityCurrent);
 }
 
 let form = document.querySelector("#search");
