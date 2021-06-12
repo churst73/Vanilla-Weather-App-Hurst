@@ -1,3 +1,7 @@
+let celciusTemperature = null;
+let units = "metric";
+let cityCurrent = "London";
+
 function formatDate(timestamp) {
   let date = new Date(timestamp);
   let hours = date.getHours();
@@ -19,7 +23,6 @@ function formatDay(timestamp) {
 }
 
 function displayForecast(response) {
-  console.log(response.data.daily);
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
 
@@ -37,10 +40,10 @@ function displayForecast(response) {
                       forecastDay.weather[0].main
                     }.png" alt="bolt" width=40px>
                     <br />
-                    <div class="high-temp">
+                    <div class="high-temp" id="max">
                         ${Math.round(forecastDay.temp.max)}°
                     </div>
-                    <div class="low-temp">
+                    <div class="low-temp" id="min">
                         ${Math.round(forecastDay.temp.min)}°
                     </div>
                 </p>
@@ -53,7 +56,7 @@ function displayForecast(response) {
 
 function getForecast(coordinates) {
   let apiKey = "90cc04858e590b27514e091504dac169";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(displayForecast);
 }
 
@@ -82,18 +85,12 @@ function showTemperature(response) {
 
 function search(city) {
   let apiKey = "90cc04858e590b27514e091504dac169";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showTemperature);
 }
 
 function handleSubmit(event) {
   event.preventDefault();
-  let imageCelcius = document.querySelector("#degree-celcius");
-  let loveChange = document.querySelector("#love");
-  if (loveChange.innerHTML.trim() === "Love Celcius?") {
-    imageCelcius.src = "images/degreec.png";
-    loveChange.innerHTML = "Love Fahrenheit?";
-  }
   let cityInputElement = document.querySelector("#search-result");
   search(cityInputElement.value);
 }
@@ -104,7 +101,6 @@ form.addEventListener("submit", handleSubmit);
 function locationName(response) {
   let apiKey = "90cc04858e590b27514e091504dac169";
   let city = response.data.name;
-  let units = "metric";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showTemperature);
 }
@@ -113,7 +109,7 @@ function searchLocation(position) {
   let apiKey = "90cc04858e590b27514e091504dac169";
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(locationName);
 }
 
@@ -133,20 +129,26 @@ function changeDegree() {
     let celcius = document.querySelector("#current-celcius");
     let fahrenheit = celcius.innerHTML;
     celcius.innerHTML = Math.round((celciusTemperature * 9) / 5 + 32);
+    units = "imperial";
+    let speedUnit = document.querySelector("#speedUnit");
+    speedUnit.innerHTML = " mph";
     loveChange.innerHTML = "Love Celcius?";
   } else {
     imageCelcius.src = "images/degreec.png";
     let fahrenheit = document.querySelector("#current-celcius");
     let celcius = fahrenheit.innerHTML;
     fahrenheit.innerHTML = Math.round(((celcius - 32) * 5) / 9);
+    units = "metric";
+    let speedUnit = document.querySelector("#speedUnit");
+    speedUnit.innerHTML = " km/h";
     let loveChange = document.querySelector("#love");
     loveChange.innerHTML = "Love Fahrenheit?";
   }
+  console.log(cityCurrent);
+  search(cityCurrent);
 }
-
-let celciusTemperature = null;
 
 let change = document.querySelector("#degree-change");
 change.addEventListener("click", changeDegree);
 
-search("London");
+search(cityCurrent);

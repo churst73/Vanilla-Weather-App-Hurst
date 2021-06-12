@@ -123,6 +123,7 @@ h3 {
   text-align: center;
   margin-left: 6px;
   margin-top: -120px;
+  margin-left: 15px;
 }
 .forecast-day {
   font-family: "Poppins", sans-serif;
@@ -133,11 +134,7 @@ h3 {
 .col-2 {
   margin-right: 10px;
 }
-.fa-cloud-showers-heavy {
-  font-size: 25px;
-  margin-top: 18px;
-  color: #5d79b2;
-}
+
 .weather {
   margin-top: 12px;
 }
